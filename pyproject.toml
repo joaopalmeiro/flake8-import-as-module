@@ -39,9 +39,18 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 # https://flake8.pycqa.org/en/5.0.0/user/options.html#cmdoption-flake8-count
+# https://flake8.pycqa.org/en/5.0.0/user/options.html#cmdoption-flake8-statistics
+# https://github.com/tylerwince/flake8-bandit#configuration + https://github.com/tylerwince/flake8-bandit/issues/3
+# https://github.com/tylerwince/flake8-bandit/blob/v4.1.1/flake8_bandit.py#L34
+# https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+# Even though the `.bandit` file excludes the `tests/` folder, VS Code continues to report the S101 code.
+# However, when running Flake8 in the terminal (`flake8 tests/`), the error does not appear.
+# To avoid this error being reported in VS Code, it is also ignored via Flake8 (the `.bandit` file could be dropped).
 [tool.flake8]
 max-line-length = 88
 count = true
+statistics = true
+per-file-ignores = ["tests/test_plugin.py:S101"]
 
 # https://pycqa.github.io/isort/docs/configuration/config_files.html#pyprojecttoml-preferred-format
 # https://pycqa.github.io/isort/docs/configuration/black_compatibility.html
