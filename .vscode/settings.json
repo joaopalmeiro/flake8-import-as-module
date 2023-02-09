@@ -1,0 +1,26 @@
+{
+  "git.enabled": true,
+  "files.autoSave": "off",
+
+  "editor.formatOnSave": true,
+
+  // https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter
+  "python.formatting.provider": "none",
+
+  "python.linting.enabled": true,
+  "python.linting.lintOnSave": true,
+  "python.linting.flake8Enabled": true,
+  "python.linting.mypyEnabled": true,
+
+  "[python]": {
+    // https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter
+    // https://marketplace.visualstudio.com/items?itemName=ms-python.isort
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    },
+    "editor.rulers": [88]
+  },
+
+  "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python"
+}
