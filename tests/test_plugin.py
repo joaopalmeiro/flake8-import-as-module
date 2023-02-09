@@ -17,6 +17,8 @@ def run_plugin(code: str) -> Set[str]:
 
 
 @pytest.mark.parametrize(
+    # ("code",),
+    # https://github.com/m-burst/flake8-pytest-style/blob/master/docs/rules/PT006.md
     "code",
     [
         "from altair import Chart",
