@@ -19,12 +19,26 @@ def run_plugin(code: str) -> Set[str]:
 @pytest.mark.parametrize(
     "code",
     [
+        "from altair import Chart",
+    ],
+)
+def test_from_altair_import(code):
+    result = run_plugin(code)
+    assert result == {
+        "1:0: IM001 `from altair import ...` is unconventional. "
+        "`altair` should be imported as a module."
+    }
+
+
+@pytest.mark.parametrize(
+    "code",
+    [
         "from pandas import DataFrame",
     ],
 )
-def test_IM001_from_pandas_import(code):
+def test_from_pandas_import(code):
     result = run_plugin(code)
     assert result == {
-        "1:0: IM001 `from pandas import ...` is unconventional. "
+        "1:0: IM002 `from pandas import ...` is unconventional. "
         "`pandas` should be imported as a module."
     }

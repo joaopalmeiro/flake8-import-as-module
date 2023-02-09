@@ -69,3 +69,4 @@ git push origin "v$(poetry version --short)"
 - `poetry add isort@^5.11.5 --group dev`
 - `flake8 --version`
 - https://www.flake8rules.com/
+- https://github.blog/2020-05-12-create-and-push-tags-in-the-latest-github-desktop-2-5-release/
