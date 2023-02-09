@@ -34,6 +34,8 @@ def test_from_altair_import(code):
     "code",
     [
         "from pandas import DataFrame",
+        "from pandas import Series",
+        "from pandas import DataFrame, Series",
     ],
 )
 def test_from_pandas_import(code):
