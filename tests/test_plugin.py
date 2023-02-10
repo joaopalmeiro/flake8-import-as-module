@@ -21,7 +21,10 @@ def run_plugin(code: str) -> Set[str]:
     # https://github.com/m-burst/flake8-pytest-style/blob/master/docs/rules/PT006.md
     "code",
     [
+        "from altair import Chart, X, Y",
         "from altair import Chart",
+        "from altair import X",
+        "from altair import Y",
     ],
 )
 def test_from_altair_import(code):
@@ -35,9 +38,9 @@ def test_from_altair_import(code):
 @pytest.mark.parametrize(
     "code",
     [
+        "from pandas import DataFrame, Series",
         "from pandas import DataFrame",
         "from pandas import Series",
-        "from pandas import DataFrame, Series",
     ],
 )
 def test_from_pandas_import(code):
