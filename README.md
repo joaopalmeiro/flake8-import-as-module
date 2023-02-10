@@ -1,5 +1,11 @@
 # flake8-import-as-module
 
+<p align="center">
+  <img alt="" src="https://raw.githubusercontent.com/joaopalmeiro/flake8-import-as-module/main/assets/logo_round.png" width="100" height="100" />
+</p>
+
+[![PyPI](https://img.shields.io/pypi/v/flake8-import-as-module.svg)](https://pypi.org/project/flake8-import-as-module/)
+
 A [Flake8](https://flake8.pycqa.org/) plugin to check if specific packages are imported as modules.
 
 ## References
