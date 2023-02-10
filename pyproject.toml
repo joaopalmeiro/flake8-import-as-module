@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "flake8-import-as-module"
-version = "0.0.1"
+version = "0.1.0"
 description = "A Flake8 plugin to check if specific packages are imported as modules."
 authors = ["João Palmeiro <joaopalmeiro@proton.me>"]
 license = "MIT"
