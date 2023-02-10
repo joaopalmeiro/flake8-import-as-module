@@ -8,6 +8,13 @@
 
 A [Flake8](https://flake8.pycqa.org/) plugin to check if specific packages are imported as modules.
 
+## Flake8 codes
+
+| Package                                 | Code  | Description                                                                          |
+| --------------------------------------- | ----- | ------------------------------------------------------------------------------------ |
+| [Altair](https://altair-viz.github.io/) | IM001 | `from altair import ...` is unconventional. `altair` should be imported as a module. |
+| [pandas](https://pandas.pydata.org/)    | IM002 | `from pandas import ...` is unconventional. `pandas` should be imported as a module. |
+
 ## References
 
 - https://docs.python.org/3.7/tutorial/modules.html
@@ -28,6 +35,12 @@ poetry shell
 
 ```bash
 pytest tests/ -v
+```
+
+Copy the output of the following script and paste it in the [Flake8 codes](#flake8-codes) section:
+
+```bash
+python gen_table.py
 ```
 
 If changes are not reflected in VS Code after changing something in the package, close it and open it again.
@@ -61,18 +74,3 @@ git tag "v$(poetry version --short)"
 ```bash
 git push origin "v$(poetry version --short)"
 ```
-
-## Notes
-
-- https://docs.python.org/3.7/library/ast.html#abstract-grammar
-- https://github.com/pycqa/isort/wiki/isort-Plugins + https://github.com/Microsoft/vscode-python + https://marketplace.visualstudio.com/items?itemName=ms-python.isort
-- https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter
-- https://github.com/john-hen/Flake8-pyproject
-- https://flake8.pycqa.org/en/5.0.0/user/options.html
-- https://github.com/tylerwince/flake8-bandit
-- https://github.com/m-burst/flake8-pytest-style
-- `poetry add mypy black pytest Flake8-pyproject flake8-bandit flake8-pytest-style --group dev`
-- `poetry add isort@^5.11.5 --group dev`
-- `flake8 --version`
-- https://www.flake8rules.com/
-- https://github.blog/2020-05-12-create-and-push-tags-in-the-latest-github-desktop-2-5-release/
