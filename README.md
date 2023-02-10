@@ -8,6 +8,14 @@
 
 A [Flake8](https://flake8.pycqa.org/) plugin to check if specific packages are imported as modules.
 
+## Installation
+
+Via [Pipenv](https://pipenv.pypa.io/):
+
+```bash
+pipenv install --dev flake8 flake8-import-as-module
+```
+
 ## Flake8 codes
 
 | Package                                 | Code  | Description                                                                          |
