@@ -5,7 +5,7 @@ from pytablewriter import MarkdownTableWriter
 from flake8_import_as_module.constants import CODE_PREFIX, PACKAGES
 from flake8_import_as_module.utils import generate_code, generate_description
 
-# Follow the same order as in name2asname:
+# Follow the same order as in PACKAGES:
 package2name: Dict[str, str] = {
     "altair": "Altair",
     "pandas": "pandas",
